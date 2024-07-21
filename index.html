@@ -39,8 +39,16 @@
         .passphrase-input {
             padding: 10px;
             font-size: 16px;
-            width: 200px;
+            width: 250px;
             margin-right: 10px;
+        }
+        .passphrase-button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
         .message {
             margin-top: 20px;
@@ -59,7 +67,7 @@
         <p>Hello! This is a simple webpage created as an example. You can add more content here.</p>
         <div class="passphrase-container">
             <input type="text" id="passphrase" class="passphrase-input" placeholder="Enter passphrase">
-            <button onclick="checkPassphrase()">Submit</button>
+            <button class="passphrase-button" onclick="checkPassphrase()">Submit</button>
             <div id="message" class="message">Forget your Failures but Remember the Lesson</div>
         </div>
     </div>
