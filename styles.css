@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333333; /* Dark grey background */
+    background-image: url('Riddler.png'); /* Single background image */
+    background-size: contain; /* Ensure the entire image is visible */
+    background-position: left center; /* Move image slightly off-center to the left */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #d0f0c0; /* Soft green text color */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Center align the container horizontally */
+    align-items: center; /* Center align the container vertically */
+    height: 100vh;
+    overflow: hidden; /* Hide overflow caused by transformations */
+}
+.container {
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly opaque black background */
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 10px;
+    text-align: center;
+    width: 500px; /* Wider and more rectangular */
+    border: 2px solid #009900; /* Thin green border */
+}
+h1 {
+    color: #66ff66; /* Lighter green */
+    font-size: 1.8em; /* Larger font size */
+    font-weight: bold;
+}
+textarea {
+    width: calc(100% - 24px); /* Adjust width to account for padding and border */
+    height: 50px;
+    border: 2px solid #009900; /* Thin green border */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333333;
+}
+button {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #009900; /* Green background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #007700; /* Darker green on hover */
+}
+.message {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #d0f0c0;
+}

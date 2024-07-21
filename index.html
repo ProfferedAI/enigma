@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passphrase Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To crack the code and win this feat, What passphrase will you repeat?</h1>
+        <textarea id="passphrase" placeholder="Enter passphrase here..."></textarea>
+        <button id="submit-btn">Submit</button>
+        <div class="message" id="message"></div>
+    </div>
+    <script>
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            const passphrase = document.getElementById('passphrase').value.trim();
+            const messageElement = document.getElementById('message');
+            if (passphrase === 'remember') {
+                messageElement.textContent = 'Forget the Mistake, Remember the Lesson';
+            } else if (passphrase) {
+                messageElement.textContent = 'Your guess was a swing and a miss, Batman dear, Try once more, the answer is near!';
+            } else {
+                messageElement.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>
