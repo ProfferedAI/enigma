@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passphrase Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2e2e2e; /* Dark grey background */
+            color: #a4c6a6; /* Soft green text */
+            background-image: url('your-background-image.jpg'); /* Background image */
+            background-size: cover; /* Ensure the image covers the whole page */
+            background-position: center; /* Center the image */
+        }
+        header {
+            background-color: #1f1f1f;
+            color: #a4c6a6;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+        }
+        footer {
+            background-color: #1f1f1f;
+            color: #a4c6a6;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .passphrase-container {
+            margin-top: 20px;
+        }
+        .passphrase-input {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+            margin-right: 10px;
+            border: 1px solid #a4c6a6; /* Soft green border */
+            background-color: #3e3e3e; /* Darker grey background for input */
+            color: #a4c6a6;
+        }
+        .passphrase-button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50; /* Soft green button */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            display: none;
+        }
+        .correct-message {
+            color: #a4c6a6; /* Soft green */
+        }
+        .incorrect-message {
+            color: #ff4d4d; /* Red for incorrect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Passphrase Verification</h1>
+    </header>
+    <div class="container">
+        <h2>Enter Passphrase</h2>
+        <div class="passphrase-container">
+            <input type="text" id="passphrase" class="passphrase-input" placeholder="Enter passphrase">
+            <button class="passphrase-button" onclick="checkPassphrase()">Submit</button>
+            <div id="message" class="message correct-message">Forget the Mistake, Remember the Lesson</div>
+            <div id="incorrect-message" class="message incorrect-message">Your guess was a swing and a miss, Batman dear, Try once more, the answer is near!</div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Passphrase Page</p>
+    </footer>
+
+    <script>
+        function checkPassphrase() {
+            var passphrase = document.getElementById('passphrase').value;
+            var correctMessage = document.getElementById('message');
+            var incorrectMessage = document.getElementById('incorrect-message');
+            
+            if (passphrase === 'remember') {
+                correctMessage.style.display = 'block';
+                incorrectMessage.style.display = 'none';
+            } else {
+                correctMessage.style.display = 'none';
+                incorrectMessage.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
