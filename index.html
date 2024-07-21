@@ -32,6 +32,20 @@
             bottom: 0;
             width: 100%;
         }
+        .passphrase-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .passphrase-input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #4CAF50;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -41,9 +55,26 @@
     <div class="container">
         <h2>About Me</h2>
         <p>Hello! This is a simple webpage created as an example. You can add more content here.</p>
+        <div class="passphrase-container">
+            <input type="text" id="passphrase" class="passphrase-input" placeholder="Enter passphrase">
+            <button onclick="checkPassphrase()">Submit</button>
+            <div id="message" class="message">Forget your Failures but Remember the Lesson</div>
+        </div>
     </div>
     <footer>
         <p>&copy; 2024 My Simple Webpage</p>
     </footer>
+
+    <script>
+        function checkPassphrase() {
+            var passphrase = document.getElementById('passphrase').value;
+            var message = document.getElementById('message');
+            if (passphrase === 'remember') {
+                message.style.display = 'block';
+            } else {
+                message.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
